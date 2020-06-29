@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドラッグアンドドロップを実装してみよう</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/drag_and_drop.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <h1 class="navbar-brand">ドラッグアンドドロップを実装してみよう</h1>
+  </nav>
+
+  <main class="container mt-5">
+    <div class="card bg-light mb-3">
+      <div class="card-header">ドラッグアンドドロップを実装してみよう</div>
+      <div class="card-body">
+        <p class="card-text">
+          エレメントをドラッグアンドドロップで移動させてみてください。
+          <br>event.dataTransfer.setData()を使用したサンプルが多いですが、実際には全てのドラッグするエレメントにIDをつけるのは現実的ではありませんので、dragItemにエレメントをセットするやり方で実装してみましょう。
+        </p>
+      </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+      <div class="card-header">ドラッグアンドドロップで移動するよ</div>
+      <div class="card-body">
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary mr-2 js-add-item">アイテムを追加</button>
+          <button type="button" class="btn btn-success js-add-drop-item">ドロップゾーンを追加</button>
+        </div>
+        <div id="drop-items">
+          <div class="drop-item">
+            <div class="drag-item" draggable="true">
+              アイテム
+            </div>
+          </div>
+          <div class="drop-item"></div>
+          <div class="drop-item"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/drag_and_drop.js"></script>
+</body>
+</html>

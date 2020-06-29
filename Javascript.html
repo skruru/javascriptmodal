@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/javascript.css">
+
+    <title>Javascript</title>
+  </head>
+
+  <body>
+    <header>
+      <nav  class="navbar navbar-dark bg-primary fixed-top">
+        <a href="#"><h1 class="navbar-brand">Javascript</h1></a>
+
+        <ul class="nav">
+          <li class="js-nav-items1 nav-item" data-id="item-a">
+            <a class="nav-link" href="#home">ホーム</a>
+          </li>
+          <li class="js-nav-items1 nav-item" data-id="item-b">
+            <a class="nav-link" href="#items">商品一覧</a>
+          </li>
+          <li class="js-nav-items1 nav-item" data-id="item-c">
+            <a class="nav-link" href="#info">お知らせ</a>
+          </li>
+          <li class="js-nav-items2 nav-item" data-id="item-d">
+            <a class="nav-link" href="#qa">よくある質問</a>
+          </li>
+          <li class="js-nav-items2 nav-item" data-id="item-e">
+            <a class="nav-link" href="#access">アクセス</a>
+          </li>
+          <li class="js-nav-items2 nav-item" data-id="item-f">
+            <a class="nav-link" href="#contact">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="spacer">
+        <h2 class="h2">ホーム</h2>
+
+        <div class="select_wrap">
+          <select id="none-selected-items" class="slc form-control" multiple>
+            <option value="item1">item1</option>
+            <option value="item1">item2</option>
+            <option value="item1">item3</option>
+            <option value="item1">item4</option>
+            <option value="item1">item5</option>
+            <option value="item1">item6</option>
+            <option value="item1">item7</option>
+            <option value="item1">item8</option>
+            <option value="item1">item9</option>
+          </select>
+
+          <div class="arrows">
+            <button class="btn btn-outline-secondary js-item-to-right" type="button">&gt;</button>
+            <button class="btn btn-outline-secondary js-item-to-right-all" type="button">&gt;&gt;</button>
+            <button class="btn btn-outline-secondary js-item-to-left" type="button">&lt;</button>
+            <button class="btn btn-outline-secondary js-item-to-left-all" type="button">&lt;&lt;</button>
+          </div>
+
+          <select id="selected-items" name="items" class="slc form-control" multiple></select>
+        </div>
+      </section>
+
+      <section id="items" class="spacer">
+        <h2 class="h2">商品一覧</h2>
+      </section>
+
+      <section id="info" class="spacer">
+        <h2 class="h2">お知らせ</h2>
+      </section>
+
+      <section id="qa" class="spacer">
+        <h2 class="h2">よくある質問</h2>
+      </section>
+
+      <section id="access" class="spacer">
+        <h2 class="h2">アクセス</h2>
+      </section>
+
+      <section id="contact" class="spacer">
+        <h2 class="h2">お問い合わせ</h2>
+      </section>
+    </main>
+
+
+    <div class="scroll-top js-scroll-top"><span>↑</span></div>
+
+    <!-- 自身の作成したファイルの読込 -->
+    <script src="js_answer/smooth_scroll.js"></script>
+    <script src="js_answer/scroll_top.js"></script>
+    <script src="js_answer/select.js"></script>
+  </body>
+</html>

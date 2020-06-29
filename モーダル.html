@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>モーダルを実装してみよう</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <h1 class="navbar-brand">モーダルを実装してみよう</h1>
+  </nav>
+
+  <main class="container mt-5">
+    <div class="card bg-light mb-3">
+      <div class="card-header">モーダルを実装してみよう</div>
+      <div class="card-body">
+        プラグインなどを使用してもできますが、モーダル用のエレメントを表示するかどうかだけなので自分で実装してみましょう。
+        <br>BootstrapのCSSを読み込んでいますので、エレメントのクラス名はBootstrapのものを使用しても良いですし自分で実装してもかまいません。
+
+        <ul>
+          <li>要件
+            <ul>
+              <li>「モーダルを開く」ボタンを押すとモーダルが開くこと</li>
+              <li>モーダルには「追加」ボタンと「閉じる」ボタンがあること</li>
+              <li>モーダルには文字列を入力するinput要素があること</li>
+              <li>「閉じる」ボタンもしくは背景を押すとモーダルが閉じられること</li>
+              <li>「追加」ボタンを押すとinput要素に何も入力されれていないときにはalertで「何か入力してください」と表示、何か入力されているときはその値をalertで表示して、モーダルが閉じられること</li>
+              <li>モーダルを表示しているときはbody要素がスクロールができないようにする(overflow: hidden)</li>
+              <li>bodyにoverflow: hiddenをセットするとスクロールバーが消えてガタッと動くように感じられるのでスクロールバー分paddingを入れる</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+      <div class="card-header">モーダル</div>
+      <div class="card-body">
+        <button type="button" class="btn btn-primary js-modal-open">モーダルを開く</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/modal.js"></script>
+</body>
+</html>

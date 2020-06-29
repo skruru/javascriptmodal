@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全選択を実装してみよう</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all_select.css">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <h1 class="navbar-brand">全選択を実装してみよう</h1>
+  </nav>
+
+  <main class="container mt-5">
+    <div class="card bg-light mb-3">
+      <div class="card-header">全選択を実装してみよう</div>
+      <div class="card-body">
+        <ul>
+          <li>全選択のチェックボックスがチェック状態になった時は全てのアイテムのチェックボックスをチェック状態にしてください。</li>
+          <li>全選択のチェックボックスが非チェック状態になった時は全てのアイテムのチェックボックスを非チェック状態にしてください。</li>
+          <li>全てのアイテムのチェックボックスがチェック状態のときは全選択のチェックボックスをチェック状態にしてください。</li>
+          <li>全てのアイテムのチェックボックスが非チェック状態のときは全選択のチェックボックスを非チェック状態にしてください。</li>
+          <li>一部のアイテムのチェックボックスがチェック状態のときは全選択のチェックボックスを中間状態にしてください。</li>
+          <li>
+            「選択されたアイテム一覧」にチェックボックスの付いたアイテム名を表示してください。
+            <ul>
+              <li>選択されているアイテムのspanのコピーを「#selected-items」に挿入することで実装してください。</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+      <div class="card-header">全選択</div>
+      <div class="card-body">
+        <ul>
+          <li>
+            <div><input type="checkbox" id="select-all"><label class="mb-0 ml-2" for="select-all">全選択</label></div>
+            <div>
+              <ul>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム１</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム２</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム３</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム４</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム５</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム６</span></label></li>
+                <li><label><input type="checkbox" class="js-check"><span class="js-item pl-2">アイテム７</span></label></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <div>
+          <div class="card bg-light">
+            <div class="card-header">選択されたアイテム一覧</div>
+            <div id="selected-items" class="card-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js_answer/all_select2.js"></script>
+</body>
+</html>
