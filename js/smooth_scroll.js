@@ -3,4 +3,29 @@ document.addEventListener('DOMContentLoaded', function () {
   // 「window.scroll」を使ってスクロールさせましょう
   // jQueryと違い要素一つ一つにイベントをセットしたり、値を変更したりしなければなりません
   // [JavaScript で forEach を使うのは最終手段](https://qiita.com/diescake/items/70d9b0cbd4e3d5cc6fce)
+  const navLinks = document.querySelectorAll('[href^="#"]');//hrefの前方一致
+  //配列内のそれぞれの要素にイベントをつける
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    //aタグのデフォルトをキャンセルする
+    e.preventDefault();
+    //hrefの取得
+    const href = link.getAttribute('href');
+    //移動先があるかどうかを取得
+    const target = document.querySelector(href === "#" ? 'html'  : href ) || document.querySelector('html');
+    // navのaタグをクリックしたら、クリックした時のwindowからのy座標をとる
+    const pageOffset = window.pageYOffset();
+    // リンク先のトップ位置の取得
+    const position = target.getBoundingClientRect().top;
+    //フォントサイズを取得
+    const defoultFontSize = parseInt(window.getComputedStyle(document.body).fontSize, 10);
+    // navのheightをとる
+    const offSet = document.querySelector('.navbar').offSetHeight + defoultFontSize;
+    // window.scrollでスクロールさせる
+    window.scroll({
+      top: pageOffset + position - offSet,
+      behavior: 'smooth'
+    });
+  },false);
+});
 }, false);
