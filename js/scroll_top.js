@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   //btnの取得
   const scrollTop = document.querySelector('.js-scroll-top');
   // クリックイベント
-  scrollTop.addEventListener('click', () => {
+  scrollTop.addEventListener('click', function () {
     // スムーススクロールを実行
-    window.scrollTo({
+    window.scroll({
       top: 0,
       behavior: 'smooth'
     });
   }, false);
   // スクロール量を取得
-  window.addEventListener('scroll', event => {
+  window.addEventListener('scroll', function (event) {
     // もし現在のスクロール位置が30を超えていたらトップへ戻るボタンのエレメントにshowクラスを付与
     // 実際にスクロールしているのはwindow.documentになるのでtargetはwindow.documentになる
     // イベントを割り当てているのはwindowなのでcurrentTargetを使用する
