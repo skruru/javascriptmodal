@@ -1,3 +1,55 @@
+.overflow {
+  overflow: hidden;
+}
 main {
   height: 200vh;
+}
+.mdl.show, .mdl_bg.show {
+  opacity: 1.0;
+  transition: .5s;
+  visibility: visible;
+}
+.mdl {
+  background: #fff;
+  padding: 100px 50px;
+  width: 50%;
+  position: fixed;
+  top: 200px;
+  left: 25%;
+  transition: .5s;
+  visibility: hidden;
+  opacity: 0;
+}
+.mdl_bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  visibility: hidden;
+  transition: .5s;
+  opacity: 0;
+}
+.Btn {
+  margin-top: 30px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.addBtn:focus, .closeBtn:focus {
+  outline: 0;
+}
+.addBtn {
+  margin-right: 30px;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.closeBtn {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.input {
+  display: block;
+  width: 100%;
 }
