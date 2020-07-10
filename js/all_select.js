@@ -1,5 +1,5 @@
 // DOMツリーが構築されたときに実行(他のJavascriptの読込も完了した後に実行します)
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   // エレメントの選択 ==================================================================================================
   // 全選択のエレメントを取得
   const selectAll = document.getElementById('select-all');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // アイテムのクリックイベントを設定 ==================================================================================
   // 各アイテム毎にイベントをセット
   for(let i = 0; i < items.length; i++) {
-      items[i].addEventListener('click', () => {
+      items[i].addEventListener('click', function () {
     // 仮想の配列とitemNamesを一回全てクリアにする
         itemNames.innerHTML = '';
         selectItem = [];
